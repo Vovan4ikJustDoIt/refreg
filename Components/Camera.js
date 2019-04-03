@@ -1,6 +1,11 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+
 import { Camera, Permissions } from 'expo';
+
+import { Container, Content, Header, Item, Icon, Input, Button } from 'native-base';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+
 
 export default class CameraComponent extends React.Component {
 
@@ -16,19 +21,23 @@ export default class CameraComponent extends React.Component {
 
     render() {
        
-      const {hasCameraPermissions} = this.this.state;
+      const { hasCameraPermissions } = this.state.type;
 
-      if(hasCameraPermissions === null)
+      if (hasCameraPermissions === null)
       {
-        return ( <View>/>);
+        return <View />
       }
       else if(hasCameraPermissions === false){
-        return ( <View><Text> No access to camera </Text>/>);
+        return <Text>No access to camera</Text>
       }
       else{
         return (
-        <View style={{flex:1}}>
-          <Camera style={{flex:1}} type={this.state.type}></Camera>
+        <View style={{flex:26}}>
+          <Camera style={{flex:1}} type={this.state.type}>
+            <Header
+              style={{position: 'absolute', backgroundColor: 'transparent', left: '0', top: '0', right: '0', zIndex: 100 }}>
+            </Header>
+          </Camera>
         </View>
         );
       }

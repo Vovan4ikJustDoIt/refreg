@@ -10,9 +10,7 @@ export default class App extends React.Component {
       
       <View style={{flex: 1}}>
         <View style={{flex: 1, backgroundColor: '#e35628'}}/>
-        //<View style={{flex: 26, backgroundColor: '#ea845e', justifyContent: "center", alignItems: "center"}}>
-        	<Camera style={{flex: 26}}></Camera>
-        </View>
+        <Camera></Camera>
       </View>
     );
   }

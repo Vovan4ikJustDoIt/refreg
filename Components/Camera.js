@@ -34,9 +34,18 @@ export default class CameraComponent extends React.Component {
         return (
         <View style={{flex:26}}>
           <Camera style={{flex:1}} type={this.state.type}>
-            <Header
-              style={{position: 'absolute', backgroundColor: 'transparent', left: '0', top: '0', right: '0', zIndex: 100 }}>
+            <Header 
+              style={{position: 'absolute', backgroundColor: 'transparent', left: 0, top: 0, right: 0, zIndex: 100 }}
+              >
             </Header>
+            <View style={{ flex: 4 , alignItems: 'center'}}/>
+            <View style={{ flex: 1, alignItems: 'center'}}>
+              <MaterialCommunityIcons
+                name="circle-outline"
+                style={{color: 'white', fontSize: 100}}
+              >
+              </MaterialCommunityIcons>
+            </View>
           </Camera>
         </View>
         );

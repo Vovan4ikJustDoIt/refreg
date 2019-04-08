@@ -41,9 +41,7 @@ export default class CameraComponent extends React.Component {
             <View style={{ flex: 4 , alignItems: 'center'}}/>
             <View style={{ flex: 1, alignItems: 'center'}}>
               <MaterialCommunityIcons
-              onPress={() => {
-    Alert.alert('You tapped the button!');
-  }}
+              onPress={snap}
                 name="circle-outline"
                 style={{color: 'white', fontSize: 100}}
               >
@@ -65,5 +63,18 @@ const styles = StyleSheet.create({
     justifyContent:'center'
   }
 });
+
+
+    snap = async () => {
+  if (this.camera) {
+    let photo = await this.camera.takePictureAsync();
+    console.log(photo);
+  }else{
+    Alert.alert('Alert Title');
+  }
+};
+  
+
+
 
 

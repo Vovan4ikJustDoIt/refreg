@@ -5,8 +5,12 @@
     "privacy": "public",
     "sdkVersion": "32.0.0",
     "platforms": [
-      "ios",
-      "android"
+      "ios":{
+      "permission": ["CAMERA"]
+    },
+      "android":{
+      "permission": ["CAMERA"]
+    }
     ],
     "version": "1.0.0",
     "orientation": "portrait",
@@ -23,7 +27,8 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
     }
+    
   }
 }

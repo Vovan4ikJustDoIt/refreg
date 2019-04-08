@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Alert } from 'react-native';
 
 import { Camera, Permissions } from 'expo';
 
@@ -41,6 +41,9 @@ export default class CameraComponent extends React.Component {
             <View style={{ flex: 4 , alignItems: 'center'}}/>
             <View style={{ flex: 1, alignItems: 'center'}}>
               <MaterialCommunityIcons
+              onPress={() => {
+    Alert.alert('You tapped the button!');
+  }}
                 name="circle-outline"
                 style={{color: 'white', fontSize: 100}}
               >
